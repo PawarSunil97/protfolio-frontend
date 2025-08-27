@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import { ReactTyped } from "react-typed";
+import { Typewriter } from 'react-simple-typewriter';
 import axios from "axios";
 import { toast } from "react-toastify";
 import imgBack from "../../assets/images/mailz.jpeg";
@@ -74,17 +74,17 @@ export default function ContactMe( props) {
         {/* Left Side */}
         <div className="col">
           <h2 className="title">
-              <ReactTyped
-               strings={[
-               "Get In Touch 📧",
-               "Send Email 📧",
-              ]}
-             typeSpeed={70}    
-             backSpeed={40}   
-             backDelay={1500} 
-             loop
-             />
-            
+              
+             <Typewriter
+                            words={['Get In Touch 📧', 'Send Email 📧']}
+                        loop={0}
+                        cursor
+                        cursorStyle="|"
+                        typeSpeed={70}
+                        deleteSpeed={50}
+                         delaySpeed={1000}
+                
+                            />
           </h2>
           <a href="#"><i className="fa fa-facebook-square" /></a>
           <a href="#"><i className="fa fa-google-plus-square" /></a>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import Typical from "react-typical";
-import { ReactTyped } from "react-typed";
+import { Typewriter } from 'react-simple-typewriter';
 import "./Profile.css"
 import ScrollService from "../../../utils/ScrollService";
 
@@ -34,17 +34,15 @@ export const Profile = () => {
           <div className="profile-details-role">
             <span className="primary-text">
               <h1>
-                    <ReactTyped
-                  strings={[
-                    "'React Dev ⚛️'",
-                    "NEXT JS",
-                    "🧑‍💼 Full stack dev",
-                    "🚀 MERN stack dev",
-                  ]}
-                  typeSpeed={70}    // typing speed (lower = slower)
-                  backSpeed={40}    // backspace speed
-                  backDelay={1500}  // pause before deleting
-                  loop
+                <Typewriter
+                words={['React Dev ⚛️', 'NEXT JS', '🧑‍💼 Full stack dev','🚀 MERN stack dev']}
+            loop={0}
+            cursor
+            cursorStyle="|"
+            typeSpeed={70}
+            deleteSpeed={50}
+             delaySpeed={1000}
+    
                 />
 
               </h1>
