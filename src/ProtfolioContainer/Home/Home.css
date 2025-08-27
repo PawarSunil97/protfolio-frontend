@@ -1,0 +1,43 @@
+.home-container{
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+    min-height: 670px;
+     /* background-image: url("../../assets/Home/bg.jpg"); */
+background: linear-gradient(to right, #452846, #2b042d, #85117f);
+
+}
+/* Floating Chat Button */
+.chat-button-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;   /* 👈 always left side */
+  z-index: 999;
+}
+
+.btn-message {
+  background: #6c63ff;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+}
+
+.btn-message:hover {
+  background: #5848d9;
+}
+
+/* Chatbox Wrapper */
+.chatbox-wrapper {
+  position: fixed;
+  bottom: 80px;   /* 👈 sits above the button */
+  left: 20px;
+  z-index: 1000;
+}
