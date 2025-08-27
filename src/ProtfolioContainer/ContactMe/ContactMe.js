@@ -10,13 +10,14 @@ import Animations from "../../utils/Animations";
 import Footer from "../footer/Footer";
 import "./ContactMe.css";
 
+const API = "https://sunil-protfolio.onrender.com";
 export default function ContactMe( props) {
   // State
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [banner, setBanner] = useState("");
   const [loading, setLoading] = useState(false);
  
-  
+
     const fadeInScreenHandler = (screen) => {
       if (screen.fadeInScreen !== props.id) return;
       Animations.animation.fadeInScreen(props.id);
@@ -48,8 +49,8 @@ export default function ContactMe( props) {
 
     try {
       setLoading(true);
-      const res = await axios.post("https://sunil-protfolio.onrender.com/api/contact", formData);
-
+      console.log(API)
+     const res = await axios.post(`${API}/api/contact`, formData);
       if (res.status === 200) {
         setBanner(res.data.msg);
         toast.success(res.data.msg);

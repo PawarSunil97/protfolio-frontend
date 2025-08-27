@@ -3,7 +3,7 @@ import "./ChatBox.css";
 import { io } from "socket.io-client";
 import axios from "axios";
 
-const SOCKET_URL = "http://localhost:5000";
+const SOCKET_URL = "https://sunil-protfolio.onrender.com";
 const socket = io(SOCKET_URL);
 
 export default function ChatBox({ onClose }) {
